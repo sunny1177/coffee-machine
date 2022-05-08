@@ -83,7 +83,7 @@ while order:
         water = resources["water"]
         milk = resources["milk"]
         coffee = resources["coffee"]
-        print(f"water:{water}ml\nmilk:{milk}ml\ncoffee:{coffee}ml\nmoney{profit}")
+        print(f"water:{water}ml\nmilk:{milk}ml\ncoffee:{coffee}ml\nPROFIT = {profit}$")
     else:
         drink = MENU[user]
         if is_sufficient(drink['ingredients']):
