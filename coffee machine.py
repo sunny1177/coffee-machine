@@ -1,4 +1,12 @@
-
+logo = """
+ ██████╗ ██████╗ ███████╗███████╗███████╗███████╗    ███╗   ███╗ █████╗  ██████╗██╗  ██╗██╗███╗   ██╗███████╗
+██╔════╝██╔═══██╗██╔════╝██╔════╝██╔════╝██╔════╝    ████╗ ████║██╔══██╗██╔════╝██║  ██║██║████╗  ██║██╔════╝
+██║     ██║   ██║█████╗  █████╗  █████╗  █████╗      ██╔████╔██║███████║██║     ███████║██║██╔██╗ ██║█████╗  
+██║     ██║   ██║██╔══╝  ██╔══╝  ██╔══╝  ██╔══╝      ██║╚██╔╝██║██╔══██║██║     ██╔══██║██║██║╚██╗██║██╔══╝  
+╚██████╗╚██████╔╝██║     ██║     ███████╗███████╗    ██║ ╚═╝ ██║██║  ██║╚██████╗██║  ██║██║██║ ╚████║███████╗
+ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝     ╚══════╝╚══════╝    ╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝
+                                                                                                             
+"""
 MENU = {
     "espresso": {
         "ingredients": {
@@ -41,10 +49,10 @@ def is_sufficient(order_items):
 
 
 def process_coins():
-    total = int(input("Please insert some quarters"))*0.25
-    total += int(input("Please insert some dimes"))*0.1
-    total += int(input("Please insert some nickels"))*0.05
-    total += int(input("Please insert some pennies"))*0.01
+    total = int(input("Insert some quarters"))*0.25
+    total += int(input("Insert some dimes"))*0.1
+    total += int(input("Insert some nickels"))*0.05
+    total += int(input("Insert some pennies"))*0.01
     return total
 
 
@@ -65,10 +73,10 @@ def make_coffee(drink_name, order_ingredients):
         resources[item] -= order_ingredients[item]
     print(f"Here is your {drink_name}")
 
-
+print(logo)
 order = True
 while order:
-    user = input("What you would like?(cappuccino/latte/expresso): ").lower()
+    user = input("What you would like drink today sir?(cappuccino/latte/expresso) : ").lower()
     if user == "off":
         order = False
     elif user == "report":
